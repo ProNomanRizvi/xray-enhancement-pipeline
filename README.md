@@ -1,6 +1,7 @@
 # X-Ray Enhancement Pipeline
 
-A computer vision pipeline for medical X-ray image enhancement and bone structure detection.
+Takes a raw chest X-ray and runs it through a four-stage computer vision pipeline —
+contrast enhancement, edge detection, and bone boundary overlay — entirely in Python.
 
 ## Pipeline Stages
 
@@ -31,7 +32,13 @@ Designed for Google Colab. Run directly in browser — no local setup required.
 3. Upload your X-ray image when prompted
 4. Download output files at the end
 
-## Output
+## Sample Output
 
-- `highlighted_bones_output.png` — X-ray with detected bone edges highlighted in cyan
-- `final_comparison.png` — Side-by-side comparison of all pipeline stages
+The pipeline produces a side-by-side comparison of all four stages:
+
+| Stage | Description |
+|---|---|
+| Original | Raw grayscale X-ray |
+| CLAHE Enhanced | Local contrast improved |
+| Canny Edges | Bone boundaries detected |
+| Bone Overlay | Edges highlighted in cyan |
